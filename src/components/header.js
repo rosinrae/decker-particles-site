@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from './link'
 import styled from 'styled-components'
 import {Header as SemHeader} from 'semantic-ui-react'
 
@@ -19,20 +19,17 @@ const Title = styled.h1`
 margin: 0;
 `
 
-const StyledLink = styled(Link).attrs(
-  {to: '/'}
-)`
+const TitleLink = Link.extend`
 color: white;
-text-decoration: none;
 `
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Wrapper>
       <Title>
-        <StyledLink>
+        <TitleLink to='/'>
           {siteTitle}
-        </StyledLink>
+        </TitleLink>
       </Title>
     </Wrapper>
   </StyledHeader>
