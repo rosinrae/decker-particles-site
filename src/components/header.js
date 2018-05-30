@@ -1,33 +1,41 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+import {Header as SemHeader} from 'semantic-ui-react'
+
+const StyledHeader = styled(SemHeader)`
+background: black;
+margin-bottom: 1.45rem;
+align: center;
+`
+
+const Wrapper = styled.div`
+margin: 0 auto;
+max-width: 960px;
+padding: 1.45rem 1.0875rem;
+`
+
+const Title = styled.h1`
+margin: 0;
+`
+
+const StyledLink = styled(Link).attrs(
+  {to: '/'}
+)`
+color: white;
+text-decoration: none;
+`
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
+  <StyledHeader>
+    <Wrapper>
+      <Title>
+        <StyledLink>
           {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+        </StyledLink>
+      </Title>
+    </Wrapper>
+  </StyledHeader>
 )
 
 export default Header
