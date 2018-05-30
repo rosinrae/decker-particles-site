@@ -3,7 +3,7 @@ import Link from './link'
 import styled from 'styled-components'
 import {Header as SemHeader} from 'semantic-ui-react'
 import {Nav, NavItem} from './nav'
-import {Menu} from 'semantic-ui-react'
+import {Menu, Dropdown} from 'semantic-ui-react'
 
 
 const StyledHeader = styled(SemHeader)`
