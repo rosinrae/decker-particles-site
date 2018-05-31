@@ -4,35 +4,31 @@ import styled from 'styled-components'
 import Link from './link'
 
 
-const NavLink = Link.extend`
-  color: white;
-  :hover {
-    color: white
-  }
-`
-
-const ItemWrapper = styled(Menu.Item)`
-
-`
-
-const DropdownItemWrapper = styled(Dropdown.Item)`
-  background: black !important;
-`
-
-export const NavDropdown = styled(Dropdown).attrs({
-  as: () => Menu.Item
+const StyledDropdown = styled(Dropdown).attrs({
+  className: 'item'
 })`
   color: white !important;
 `
 
-export const NavItem = ({to, drop=false, children}) => (
-  drop ? 
-  (<DropdownItemWrapper>
-    <NavLink to={to}>{children}</NavLink>
-  </DropdownItemWrapper>) :
-  (<ItemWrapper>
-    <NavLink to={to}>{children}</NavLink>
-  </ItemWrapper>)
+
+export const NavItem = styled(Menu.Item).attrs({
+  as: () => Link,
+})`
+color: white !important;
+  `
+
+export const DropdownItem = styled(Dropdown.Item).attrs({
+  as: () => Link,
+})`
+color: white !important
+`
+
+export const NavDropdown = (props) => (
+  <StyledDropdown {...props}>
+    <Dropdown.Menu>
+      {props.children}
+    </Dropdown.Menu>
+  </StyledDropdown>
 )
 
 export const Nav = styled(Menu).attrs({
