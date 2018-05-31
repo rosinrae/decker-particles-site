@@ -2,7 +2,7 @@ import React from 'react'
 import Link from './link'
 import styled from 'styled-components'
 import {Header as SemHeader} from 'semantic-ui-react'
-import {Nav, NavItem} from './nav'
+import {Nav, NavItem, NavDropdown} from './nav'
 import {Menu, Dropdown} from 'semantic-ui-react'
 
 
@@ -40,6 +40,16 @@ const Header = ({ siteTitle }) => (
         </TitleLink>
       </Title>
       <Nav>
+        <NavDropdown text="Technology" >
+          <Dropdown.Menu>
+            <NavItem drop to="/coatings/">
+              MegaParticle Coatings
+            </NavItem>
+            <NavItem drop to="/equipment/">
+              MegaBore Equipment
+            </NavItem>
+          </Dropdown.Menu>
+        </NavDropdown>
         <NavItem to="/contact/">contact</NavItem>
         <NavItem to="/about/">about</NavItem>
       </Nav>
