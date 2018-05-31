@@ -48,8 +48,9 @@ const Header = ({ siteTitle }) => (
             MegaBore Equipment
           </NavItem>
         </NavDropdown>
-        <NavItem to="/contact/">contact</NavItem>
-        <NavItem to="/about/">about</NavItem>
+        <NavItem to="/contact/">Contact</NavItem>
+        <NavItem to="/about/">About</NavItem>
+        <NavItem to="/gallery/">Gallery</NavItem>
       </Nav>
     </Wrapper>
   </StyledHeader>
