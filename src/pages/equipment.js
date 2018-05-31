@@ -1,9 +1,8 @@
 import React from 'react'
 import BasicPage from '../components/basic-page'
 
-const IndexPage = () => (
-  <BasicPage title="">
+export default () => (
+  <BasicPage title="MegaBore™ Equipment">
+    <p>stub</p>
   </BasicPage>
 )
-
-export default IndexPage
