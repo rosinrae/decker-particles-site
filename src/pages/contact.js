@@ -8,9 +8,7 @@ export default () => (
       Decker Particles Inc.
   <br/>5905 NW State Route 92
   <br/>phone: (208) 881-8049
-  <br/>email: sales@decker-particles.com
+  <br/>email: owen@decker-particles.com
     </p>
-    <p>For MegaParticle™ Coating Materials contact:</p>
-    <p>[DISTRIBUTORS]</p>
   </BasicPage>
 )

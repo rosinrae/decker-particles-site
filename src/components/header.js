@@ -22,6 +22,7 @@ display: flex;
 
 const Title = styled.h1`
 margin: auto 0;
+align-self: basis;
 `
 
 const TitleLink = Link.extend`
@@ -41,11 +42,11 @@ const Header = ({ siteTitle }) => (
       </Title>
       <Nav>
         <NavDropdown text="Technology" >
-          <NavItem to="/coatings/">
-            MegaParticle Coatings
+          <NavItem disabled to="/coatings/">
+            MegaParticle™ Coatings
           </NavItem>
           <NavItem to="/equipment/">
-            MegaBore Equipment
+            MegaBore™ Equipment
           </NavItem>
         </NavDropdown>
         <NavItem to="/contact/">Contact</NavItem>

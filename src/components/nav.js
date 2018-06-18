@@ -36,6 +36,7 @@ export const Nav = styled(Menu).attrs({
   borderless: true,
   stackable: true,
 })`
-  
   background: inherit !important;
+  margin: .20em 0 -.5em auto !important;
+  align-self: basis;
 `

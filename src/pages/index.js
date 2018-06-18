@@ -1,39 +1,45 @@
 import React from 'react'
 import BasicPage from '../components/basic-page'
-import Gallery from '../components/gallery'
-import img1 from '../assets/black-white-flake-large.jpg'
-import img2 from '../assets/white-black-flake-large.jpg'
-import img3 from '../assets/candy-speckle-large.jpg'
-import img4 from '../assets/stone-speckle-large.jpg'
-import img5 from '../assets/frying-pan-base-large.jpg'
-
-import thumb1 from '../assets/thumbnails/black-white-flake.png'
-import thumb2 from '../assets/thumbnails/white-black-flake.png'
-import thumb3 from '../assets/thumbnails/candy-speckle.png'
-import thumb4 from '../assets/thumbnails/stone-speckle.png'
-import thumb5 from '../assets/thumbnails/frying-pan-base.png'
-
-const thumbnails = [thumb1, thumb2, thumb3, thumb4, thumb5]
-
-const imageProps = (image, index) => {
-  let filename = image.split('/').pop()
-  let alt = (filename.split('.')[0]).replace(/-/g, ' ')
-  let thumbnail = thumbnails[index]
-  return {
-    original: image,
-    originalAlt: alt,
-    thumbnail: thumbnail
-  }
-}
-
-const images = [img1, img2, img3, img4, img5].map(imageProps)
-
+import {List, Header} from 'semantic-ui-react'
 const IndexPage = () => (
-  <BasicPage title="">
-    <Gallery showFullscreenButton={false}
-      showBullets={true}
-      showThumbnails={false}
-      items={images} />
+  <BasicPage title="The Decker Particles Inc. Story">
+    <article>
+    <Header size="medium">What Powder Coatings Can Do</Header>
+    <List relaxed={true} bulleted={true}>
+      <List.Content>
+        <List.Item>Show excellent appearance, weather and chemical resistance.</List.Item>
+        <List.Item>Exhibit efficient application</List.Item>
+        <List.Item>Achieve low cost</List.Item>
+        <List.Item>Provide uniform appearance</List.Item>
+        <List.Item>Provide the mechanical properties of un-reinforced plastics</List.Item>
+      </List.Content>
+    </List>
+    <Header size='medium'>What Powder Coatings <em>Cannot</em> Do</Header>
+    <List relaxed={true} bulleted={true}>
+      <List.Content>
+        <List.Item>Provide large-scale color variations</List.Item>
+        <List.Item>Include large reinforcing material</List.Item>
+        <List.Item>Provide the properties of composite materials (e.g. gouge resistance or hardness with flexibility)</List.Item>
+        <List.Item>Include information such as pictures, bar codes, or text</List.Item>
+      </List.Content>
+    </List>
+    <Header size='large'>The Decker Particles Idea</Header>
+    <p>Expand the technology of powder coatings by developing sprayable flake particles of 500µm, 1mm, 2mm, 5mm, 1cm or more in diameter.</p>
+    <p>Exploration of the <strong>Decker Particles Idea</strong> led us to develop the following brand new, novel products, and bring them to the market for the first time:</p>
+    <List bulleted>
+      <List.Content>
+        <List.Item>
+          Large, sprayable coating precursor materials - <strong>MegaParticle™</strong> coating materials
+        </List.Item>
+        <List.Item>
+          Large-bore equipment for applying large particles - <strong>MegaBore™</strong> coating equipment 
+        </List.Item>
+      </List.Content>
+    </List>
+
+    
+  </article>
+    
   </BasicPage>
 )
 
