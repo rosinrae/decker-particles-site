@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import 'semantic-ui-css/semantic.min.css'
+import 'react-image-gallery/styles/css/image-gallery.css'
 
 import Helmet from 'react-helmet'
 import Header from '../components/header'

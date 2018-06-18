@@ -10,7 +10,6 @@ import fryingPanBase from '../assets/frying-pan-base.jpg'
 const imageProps = (image) => {
   let filename = image.split('/').pop()
   let alt = (filename.split('.')[0]).replace(/-/g, ' ')
-  console.log(alt)
   return {
     original: image,
     originalAlt: alt 
@@ -21,7 +20,7 @@ const images = [blackWhiteFlake, whiteBlackFlake, candySpeckle, stoneSpeckle, fr
 
 const IndexPage = () => (
   <BasicPage title="">
-    <Gallery items={images} />
+    <Gallery showFullscreenButton={false} items={images} />
   </BasicPage>
 )
 
