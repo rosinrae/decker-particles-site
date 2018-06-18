@@ -30,7 +30,10 @@ const images = [img1, img2, img3, img4, img5].map(imageProps)
 
 const IndexPage = () => (
   <BasicPage title="">
-    <Gallery showFullscreenButton={false} items={images} />
+    <Gallery showFullscreenButton={false}
+      showBullets={true}
+      showThumbnails={false}
+      items={images} />
   </BasicPage>
 )
 
