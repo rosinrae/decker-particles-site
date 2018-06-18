@@ -1,8 +1,8 @@
 {
-  "name": "Decker Particles LLC",
-  "description": "",
+  "name": "decker-particles",
+  "description": "Site for Decker Particles LLC",
   "version": "1.0.0",
-  "author": "Rosalyn Decker (rosalynrdecker@gmail.com)",
+  "author": "Rosalyn Decker",
   "dependencies": {
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
