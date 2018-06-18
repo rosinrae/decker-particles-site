@@ -22,7 +22,6 @@ display: flex;
 
 const Title = styled.h1`
 margin: auto 0;
-align-self: basis;
 `
 
 const TitleLink = Link.extend`

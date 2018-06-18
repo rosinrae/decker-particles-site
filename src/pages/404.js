@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '../components/link'
 
 const NotFoundPage = () => (
   <div>
