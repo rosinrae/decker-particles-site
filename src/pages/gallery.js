@@ -27,14 +27,65 @@ const imageProps = (image, index) => {
   }
 }
 
-const images = [img1, img2, img3, img4, img5].map(imageProps)
+const imagesFromProps = ({data}) => [
+  data["img1"],
+  data["img2"],
+  data["img3"],
+  data["img4"],
+  data["img5"],
+]
 
+const extractImageProps = ({childImageSharp: {resolutions: {src, srcSet}}}) => {
+  return {original: src}
+}
 
-export default () => (
+export default (props) => {
+  console.log(props)
+  return (
   <BasicPage title="MegaParticle™ Coating Examples">
     <Gallery showFullscreenButton={false}
       showBullets={true}
       showThumbnails={false}
-      items={images} />
+      items={imagesFromProps(props).map(extractImageProps)} />
   </BasicPage>
-)
+)}
+
+export const query = graphql`
+  query galleryQuery {
+    img1: file(relativePath: {regex: "/gallery1/"}) {
+      childImageSharp {
+        resolutions(width:1280) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img2: file(relativePath: {regex: "/gallery2/"}) {
+      childImageSharp {
+        resolutions(width:1280) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img3: file(relativePath: {regex: "/gallery3/"}) {
+      childImageSharp {
+        resolutions(width:1280) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img4: file(relativePath: {regex: "/gallery4/"}) {
+      childImageSharp {
+        resolutions(width:1280) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img5: file(relativePath: {regex: "/gallery5/"}) {
+      childImageSharp {
+        resolutions(width:1280) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    }
+  }
+`
