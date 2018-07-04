@@ -13,6 +13,12 @@ const imagesFromProps = (data) => [
   data["img3"],
   data["img4"],
   data["img5"],
+  data["img6"],
+  data["img7"],
+  data["img8"],
+  data["img9"],
+  data["img10"],
+  data["img11"],
 ].map(img => img.childImageSharp.resolutions)
 
 const renderImg = (resolutions) => {
@@ -51,35 +57,77 @@ export default ({data}) => (
 
 export const query = graphql`
   query imageQuery {
-    img1: file(relativePath: {regex: "/gallery1/"}) {
+    img1: file(relativePath: {regex: "/gallery01/"}) {
       childImageSharp {
         resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
-    img2: file(relativePath: {regex: "/gallery2/"}) {
+    img2: file(relativePath: {regex: "/gallery02/"}) {
       childImageSharp {
         resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
-    img3: file(relativePath: {regex: "/gallery3/"}) {
+    img3: file(relativePath: {regex: "/gallery03/"}) {
       childImageSharp {
         resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
-    img4: file(relativePath: {regex: "/gallery4/"}) {
+    img4: file(relativePath: {regex: "/gallery04/"}) {
       childImageSharp {
         resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
-    img5: file(relativePath: {regex: "/gallery5/"}) {
+    img5: file(relativePath: {regex: "/gallery05/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img6: file(relativePath: {regex: "/gallery06/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img7: file(relativePath: {regex: "/gallery07/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img8: file(relativePath: {regex: "/gallery08/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img9: file(relativePath: {regex: "/gallery09/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img10: file(relativePath: {regex: "/gallery10/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img11: file(relativePath: {regex: "/gallery11/"}) {
       childImageSharp {
         resolutions(width:800) {
           ...GatsbyImageSharpResolutions
