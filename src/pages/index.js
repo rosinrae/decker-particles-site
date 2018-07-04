@@ -1,46 +1,90 @@
 import React from 'react'
 import BasicPage from '../components/basic-page'
 import {List, Header} from 'semantic-ui-react'
-const IndexPage = () => (
-  <BasicPage title="The Decker Particles Inc. Story">
-    <article>
-    <Header size="medium">What Powder Coatings Can Do</Header>
-    <List relaxed={true} bulleted={true}>
-      <List.Content>
-        <List.Item>Show excellent appearance, weather and chemical resistance.</List.Item>
-        <List.Item>Exhibit efficient application</List.Item>
-        <List.Item>Achieve low cost</List.Item>
-        <List.Item>Provide uniform appearance</List.Item>
-        <List.Item>Provide the mechanical properties of un-reinforced plastics</List.Item>
-      </List.Content>
-    </List>
-    <Header size='medium'>What Powder Coatings <em>Cannot</em> Do</Header>
-    <List relaxed={true} bulleted={true}>
-      <List.Content>
-        <List.Item>Provide large-scale color variations</List.Item>
-        <List.Item>Include large reinforcing material</List.Item>
-        <List.Item>Provide the properties of composite materials (e.g. gouge resistance or hardness with flexibility)</List.Item>
-        <List.Item>Include information such as pictures, bar codes, or text</List.Item>
-      </List.Content>
-    </List>
-    <Header size='large'>The Decker Particles Idea</Header>
-    <p>Expand the technology of powder coatings by developing sprayable flake particles of 500µm, 1mm, 2mm, 5mm, 1cm or more in diameter.</p>
-    <p>Exploration of the <strong>Decker Particles Idea</strong> led us to develop the following brand new, novel products, and bring them to the market for the first time:</p>
-    <List bulleted>
-      <List.Content>
-        <List.Item>
-          Large, sprayable coating precursor materials - <strong>MegaParticle™</strong> coating materials
-        </List.Item>
-        <List.Item>
-          Large-bore equipment for applying large particles - <strong>MegaBore™</strong> coating equipment 
-        </List.Item>
-      </List.Content>
-    </List>
+import {TM, Title, Subtitle} from '../components/text'
+import Gallery from '../components/gallery'
+import Footer from '../components/footer'
 
-    
-  </article>
-    
+import Img from 'gatsby-image'
+
+const imagesFromProps = (data) => [
+  data["img1"],
+  data["img2"],
+  data["img3"],
+  data["img4"],
+  data["img5"],
+].map(img => img.childImageSharp.resolutions)
+
+const renderImg = (resolutions) => {
+  return <Img resolutions={resolutions} />
+}
+
+export default ({data}) => (
+  <BasicPage title="">
+      <Title>Welcome to the world of <TM>MegaParticle</TM> coatings</Title>
+      <Subtitle>"the most important innovation in powder since the spray gun"</Subtitle>
+      <Gallery showFullscreenButton={false}
+            showBullets={true}
+            showThumbnails={false}
+            renderItem={renderImg}
+            items={imagesFromProps(data)} />
+    <article>
+          <h4><TM>MegaParticle</TM> coatings:</h4>
+          <ul>
+            <li>Solid, flake-shaped particles</li>
+            <li>Up to an inch across</li>
+            <li>Co-curable with powder coatings</li>
+            <li>Available in all colors and glosses</li>
+            <li>Applied like powder by elecrostatic spray</li>
+          </ul>
+          <h4><TM>MegaBore</TM> spray equipment:</h4>
+          <ul>
+            <li>Designed to apply both solid flake and powder</li>
+            <li>Operates on compressed air</li>
+            <li>Corona electrostatic charging</li>
+            <li>Rugged and inexpensive</li>
+          </ul>
+    </article>
+    <Footer>Call <big>208-881-8245</big> to learn more</Footer>
   </BasicPage>
 )
 
-export default IndexPage
+export const query = graphql`
+  query imageQuery {
+    img1: file(relativePath: {regex: "/gallery1/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img2: file(relativePath: {regex: "/gallery2/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img3: file(relativePath: {regex: "/gallery3/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img4: file(relativePath: {regex: "/gallery4/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    },
+    img5: file(relativePath: {regex: "/gallery5/"}) {
+      childImageSharp {
+        resolutions(width:800) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    }
+  }
+`

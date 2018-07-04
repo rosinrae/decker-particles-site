@@ -1,16 +1,15 @@
 import React from 'react'
 import Link from './link'
 import styled from 'styled-components'
-import {Header as SemHeader} from 'semantic-ui-react'
 import {Nav, NavItem, NavDropdown, DropdownItem} from './nav'
 import {Menu, Dropdown} from 'semantic-ui-react'
+import logo from '../assets/logo/decker-particles-text.svg'
 
 
-const StyledHeader = styled(SemHeader)`
+const StyledHeader = styled.header`
 background: black;
 margin-bottom: 1.45rem;
 align: center;
-
 `
 
 const Wrapper = styled.div`
@@ -31,9 +30,17 @@ color: white;
 }
 `
 
-const Header = ({ siteTitle }) => (
+const Logo = styled.img`
+  width: 4em;
+  height: auto;
+  position: absolute;
+  left: -4em;
+`
+
+const Header = ({siteTitle}) => (
   <StyledHeader>
     <Wrapper>
+      <Logo src={logo} />
       <Title>
         <TitleLink to='/'>
           {siteTitle}
@@ -41,7 +48,7 @@ const Header = ({ siteTitle }) => (
       </Title>
       <Nav>
         <NavDropdown text="Technology" >
-          <NavItem disabled to="/coatings/">
+          <NavItem to="/coatings/">
             MegaParticle™ Coatings
           </NavItem>
           <NavItem to="/equipment/">

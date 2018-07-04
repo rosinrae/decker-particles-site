@@ -2,51 +2,33 @@ import React from 'react'
 import BasicPage from '../components/basic-page'
 
 import Gallery from '../components/gallery'
-import img1 from '../assets/black-white-flake-large.jpg'
-import img2 from '../assets/white-black-flake-large.jpg'
-import img3 from '../assets/candy-speckle-large.jpg'
-import img4 from '../assets/stone-speckle-large.jpg'
-import img5 from '../assets/frying-pan-base-large.jpg'
+import Img from 'gatsby-image'
 
-import thumb1 from '../assets/thumbnails/black-white-flake.png'
-import thumb2 from '../assets/thumbnails/white-black-flake.png'
-import thumb3 from '../assets/thumbnails/candy-speckle.png'
-import thumb4 from '../assets/thumbnails/stone-speckle.png'
-import thumb5 from '../assets/thumbnails/frying-pan-base.png'
-
-const thumbnails = [thumb1, thumb2, thumb3, thumb4, thumb5]
-
-const imageProps = (image, index) => {
-  let filename = image.split('/').pop()
-  let alt = (filename.split('.')[0]).replace(/-/g, ' ')
-  let thumbnail = thumbnails[index]
-  return {
-    original: image,
-    originalAlt: alt,
-    thumbnail: thumbnail
-  }
-}
-
-const imagesFromProps = ({data}) => [
+const imagesFromProps = (data) => [
   data["img1"],
   data["img2"],
   data["img3"],
   data["img4"],
   data["img5"],
-]
+].map(img => img.childImageSharp.resolutions)
 
-const extractImageProps = ({childImageSharp: {resolutions: {src, srcSet}}}) => {
-  return {original: src}
+//const extractImageProps = ({childImageSharp: {resolutions: {src, srcSet}}}) => {
+//  return {original: src}
+//}
+
+const renderImg = (resolutions) => {
+  return <Img resolutions={resolutions} />
 }
 
-export default (props) => {
-  console.log(props)
+
+export default ({data}) => {
   return (
   <BasicPage title="MegaParticle™ Coating Examples">
-    <Gallery showFullscreenButton={false}
+<Gallery showFullscreenButton={false}
       showBullets={true}
       showThumbnails={false}
-      items={imagesFromProps(props).map(extractImageProps)} />
+      renderItem={renderImg}
+      items={imagesFromProps(data)} />
   </BasicPage>
 )}
 
@@ -54,35 +36,35 @@ export const query = graphql`
   query galleryQuery {
     img1: file(relativePath: {regex: "/gallery1/"}) {
       childImageSharp {
-        resolutions(width:1280) {
+        resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
     img2: file(relativePath: {regex: "/gallery2/"}) {
       childImageSharp {
-        resolutions(width:1280) {
+        resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
     img3: file(relativePath: {regex: "/gallery3/"}) {
       childImageSharp {
-        resolutions(width:1280) {
+        resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
     img4: file(relativePath: {regex: "/gallery4/"}) {
       childImageSharp {
-        resolutions(width:1280) {
+        resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
     },
     img5: file(relativePath: {regex: "/gallery5/"}) {
       childImageSharp {
-        resolutions(width:1280) {
+        resolutions(width:800) {
           ...GatsbyImageSharpResolutions
         }
       }
