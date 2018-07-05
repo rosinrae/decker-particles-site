@@ -32,6 +32,7 @@ export default ({data}) => (
       <Gallery showFullscreenButton={false}
             showBullets={true}
             showThumbnails={false}
+            showPlayButton={false}
             renderItem={renderImg}
             items={imagesFromProps(data)} />
     <article>
