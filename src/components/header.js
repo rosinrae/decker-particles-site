@@ -40,7 +40,6 @@ const Logo = styled.img`
 const Header = ({siteTitle}) => (
   <StyledHeader>
     <Wrapper>
-      <Logo src={logo} />
       <Title>
         <TitleLink to='/'>
           {siteTitle}
