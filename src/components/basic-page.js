@@ -1,19 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footer from './footer'
 
 const Title = styled.h1`
 
 `
 
-const Body = styled.div`
-
+const Wrapper = styled.article`
 `
 
-const BasicPage = ({title, children}) => (
+const BasicPage = ({title, footerMsg, children}) => {
+    
+  return (
   <div>
-    <Title>{title}</Title>
     {children}
+    <Footer>{footerMsg}</Footer>
   </div>
-)
+  )
+}
 
 export default BasicPage

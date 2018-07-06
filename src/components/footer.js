@@ -2,14 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterText = styled.p`
-  font-size: 2rem;
 `
 
-const Footer = ({children}) => (
-  <div>
-    <hr />
-    <FooterText>{children}</FooterText>
-  </div>
-)
+const StyledFooter = styled.footer`
+  position: fixed;
+  bottom: 2em;
+  
+  width: 50%;
+  height: 1em;
+  margin: auto auto;
+  background: white;
+  border-top: 1px solid black
+  padding: 1em;
+`
+
+const Footer = ({children}) => {
+  //<FooterText>{children}</FooterText>
+  return children === undefined? null: (
+    <StyledFooter>
+      <FooterText>{children}</FooterText>
+    </StyledFooter>
+  )
+}
 
 export default Footer;
