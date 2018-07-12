@@ -14,7 +14,6 @@
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
     "react-helmet": "^5.2.0",
-    "react-image-gallery": "^0.8.9",
     "react-slick": "^0.23.1",
     "rehype-react": "^3.0.2",
     "semantic-ui-css": "^2.3.1",
