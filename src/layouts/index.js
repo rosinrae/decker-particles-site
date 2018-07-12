@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 import 'semantic-ui-css/semantic.min.css'
 import 'react-image-gallery/styles/css/image-gallery.css'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import {Container} from 'semantic-ui-react'

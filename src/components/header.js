@@ -24,6 +24,7 @@ const Banner = styled.div`
 const Wrapper = styled.div`
 margin: 0 auto;
 max-width: 960px;
+height: 128px;
 padding: 1.45rem 1.0875rem;
 `
 
