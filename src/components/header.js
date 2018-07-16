@@ -10,7 +10,7 @@ import Img from 'gatsby-image'
 const StyledHeader = styled.header`
 margin-bottom: 1.45rem;
 align: center;
-background: #82afff;
+background: #96bcff;
 `
 //background: #306bac;
 
@@ -57,9 +57,8 @@ const Header = ({siteTitle, logo, banner}) =>{
             MegaBore™ Equipment
           </NavItem>
         </NavDropdown>
-        <NavItem to="/contact/">Contact</NavItem>
-        <NavItem to="/about/">About</NavItem>
-        <NavItem to="/gallery/">Gallery</NavItem>
+        <NavItem to="/contact/">Contact Us</NavItem>
+        <NavItem to="/about/">About Us</NavItem>
       </Nav>
     </Wrapper>
   </StyledHeader>

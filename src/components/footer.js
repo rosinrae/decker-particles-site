@@ -1,28 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const FooterText = styled.p`
+const FooterText = styled.h4`
 `
 
 const StyledFooter = styled.footer`
+  text-align: center;
   position: fixed;
-  bottom: 2em;
-  
+  bottom: 0px;
   width: 50%;
-  height: 1em;
-  margin: auto auto;
-  background: white;
-  border-top: 1px solid black
+  border-top: 2px solid rgb(30, 61, 125);
   padding: 1em;
+  background: #96bcff;
+  color: black;
+  font-style: italic;
 `
 
 const Footer = ({children}) => {
   //<FooterText>{children}</FooterText>
-  return children === undefined? null: (
+  return children ? (
     <StyledFooter>
       <FooterText>{children}</FooterText>
     </StyledFooter>
-  )
+  ) : null
 }
 
 export default Footer;

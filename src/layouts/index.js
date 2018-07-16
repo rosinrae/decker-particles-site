@@ -13,9 +13,6 @@ import styled, {injectGlobal} from 'styled-components'
 
 
 const Content = styled.div`
-margin: 0 auto;
-max-width: 960px !important;
-padding: 1.25em 1.0875rem 1.45rem;
 `
 
 const Layout = ({ children, data }) => (
@@ -39,6 +36,10 @@ const Layout = ({ children, data }) => (
 )
 
 injectGlobal`
+
+html {
+  min-height: 100%;
+}
 
   body {
     background: #edeeef;

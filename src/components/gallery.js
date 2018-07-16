@@ -14,13 +14,80 @@ const Gallery = styled(Slider).attrs({
   infinite: true,
   speed: 500,
   slidesToScroll: 1,
-  slidesToScroll: 1,
-  centerMode: true,
+  slidesToShow: 1,
+  arrows: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
 })`
-width: ${props => maxWidth(props.children)}px;
 height: ${props => maxHeight(props.children)}px;
-background: red;
+
+
+  .slick-next {
+    :before {
+      color: black;
+    }
+  }
+
+  .slick-prev{
+    :before {
+      color: black;
+    }
+  }
+
 `
+
+const ImageWrapper = styled(Img)`
+width: 60%;
+`
+
+
+const Title = styled.h3`
+
+`
+
+const Description = styled.p`
+
+`
+
+const Caption = styled.section`
+  width: 40%;
+  padding: 1em;
+  text-align: center;
+
+  ${Title} {
+    font-style: italic;
+
+    quotes: "“" "”" "‘" "’";
+
+    :before {
+      content: open-quote;
+    }
+
+    :after {
+      content: close-quote;
+    }
+  }
+
+  ${Description} {
+
+  }
+`
+
+const Wrapper = styled.div`
+display: flex;
+flex-direction: row;
+`
+
+export const GalleryImage = ({resolutions, title, description}) => (
+  <Wrapper>
+    <ImageWrapper resolutions={resolutions} />
+    <Caption>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+    </Caption>
+  </Wrapper>
+)
+  
 
 
 export default Gallery

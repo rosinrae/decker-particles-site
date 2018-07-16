@@ -1,10 +1,10 @@
 ---
 path: "/coatings/"
 title: "MegaParticle Coatings"
-footer: "Call 208-881-8049 for MegaParticle™ flake"
+footer: "Call 208-881-8049 for more information on MegaParticle™ flake coatings"
 ---
 
-# MegaPartcle™ Coating Flake
+# MegaParticle™ Coating Flake
 ## [order stock](/order/stock/)
 ## [order custom](/order/custom/)
 
