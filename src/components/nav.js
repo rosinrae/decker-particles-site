@@ -14,7 +14,10 @@ const StyledDropdown = styled(Dropdown).attrs({
 export const NavItem = styled(Menu.Item).attrs({
   as: () => Link,
 })`
-color: white !important;
+  color: white !important;
+  &:hover {
+    background: rgba(255, 255, 255, .4);
+  }
   `
 
 export const DropdownItem = styled(Dropdown.Item).attrs({
@@ -36,7 +39,9 @@ export const Nav = styled(Menu).attrs({
   borderless: true,
   stackable: true,
 })`
-  background: inherit !important;
-  margin: .20em 0 -.5em auto !important;
-  align-self: basis;
+  background: rgba(30, 61, 125) !important;
+  margin: 0 !important;
+  align-self: flex-start;
+  border-radius: 0px !important;
+  width: 100%;  
 `

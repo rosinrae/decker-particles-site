@@ -1,6 +1,6 @@
 import React from 'react'
-import ImageGallery from 'react-image-gallery'
 import Slider from 'react-slick'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const maxWidth = (images) => Math.max(...images.map(x => x.width))
@@ -19,6 +19,8 @@ const Gallery = styled(Slider).attrs({
 })`
 width: ${props => maxWidth(props.children)}px;
 height: ${props => maxHeight(props.children)}px;
+background: red;
 `
+
 
 export default Gallery

@@ -8,7 +8,6 @@ import Img from 'gatsby-image'
 
 
 const StyledHeader = styled.header`
-background: black;
 margin-bottom: 1.45rem;
 align: center;
 background: #82afff;
@@ -16,16 +15,18 @@ background: #82afff;
 //background: #306bac;
 
 const Banner = styled.div`
-  display: flex;
-  justify-content: space-between;
+overflow: hidden;
+direction: rtl;
+height: 128px;
 `
 
 
 const Wrapper = styled.div`
 margin: 0 auto;
 max-width: 960px;
-height: 128px;
-padding: 1.45rem 1.0875rem;
+display: flex;
+flex-direction: column;
+align-items: stretch;
 `
 
 const Title = styled.h1`
@@ -39,19 +40,15 @@ color: white;
 }
 `
 
-const Header = ({siteTitle, logo}) =>{
+const Header = ({siteTitle, logo, banner}) =>{
   console.log(logo)
   return <StyledHeader>
     <Wrapper>
       <Banner>
-        <Title>
-          <TitleLink to='/'>
-            {siteTitle}
-          </TitleLink>
-        </Title>
-        <Img sizes={logo} />
+        <Link to="/"><Img resolutions={banner} /></Link>
       </Banner>
       <Nav>
+        <NavItem to="/">Home</NavItem>
         <NavDropdown text="Technology" >
           <NavItem to="/coatings/">
             MegaParticle™ Coatings
