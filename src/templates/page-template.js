@@ -18,9 +18,11 @@ const makeRenderer = (data) => {
           <Img sizes={data[name].childImageSharp.sizes} />
   }
 
-  let ContextGalleryImage = ({name, description, title}) => (
+  let ContextGalleryImage = ({name, description, title}) => {
+    console.log(name)
+    return(
     <GalleryImage resolutions={data[name].childImageSharp.resolutions} title={title} description={description} />
-  )
+  )}
 
   return new rehypeReact({
     createElement: React.createElement,
@@ -44,6 +46,10 @@ const imagesFromProps = (data) => [
   data["img9"],
   data["img10"],
   data["img11"],
+  data["img12"],
+  data["img13"],
+  data["img14"],
+  data["img15"],
 ].map(img => <Img resolutions={img.childImageSharp.resolutions} />)
 
 export default ({ data, }) => {
@@ -74,63 +80,63 @@ export const pageQuery = graphql`
       }
     }
 
-    img1: file(relativePath: {regex: "/gallery01/"}) {
+    img1: file(relativePath: {regex: "/gallery1/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img2: file(relativePath: {regex: "/gallery02/"}) {
+    img2: file(relativePath: {regex: "/gallery2/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img3: file(relativePath: {regex: "/gallery03/"}) {
+    img3: file(relativePath: {regex: "/gallery3/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img4: file(relativePath: {regex: "/gallery04/"}) {
+    img4: file(relativePath: {regex: "/gallery4/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img5: file(relativePath: {regex: "/gallery05/"}) {
+    img5: file(relativePath: {regex: "/gallery5/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img6: file(relativePath: {regex: "/gallery06/"}) {
+    img6: file(relativePath: {regex: "/gallery6/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img7: file(relativePath: {regex: "/gallery07/"}) {
+    img7: file(relativePath: {regex: "/gallery7/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img8: file(relativePath: {regex: "/gallery08/"}) {
+    img8: file(relativePath: {regex: "/gallery8/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
     },
-    img9: file(relativePath: {regex: "/gallery09/"}) {
+    img9: file(relativePath: {regex: "/gallery9/"}) {
       childImageSharp {
         resolutions(width:700) {
           ...GatsbyImageSharpResolutions_withWebp
@@ -150,7 +156,35 @@ export const pageQuery = graphql`
           ...GatsbyImageSharpResolutions_withWebp
         }
       }
-    }
+    },
+    img12: file(relativePath: {regex: "/gallery12/"}) {
+      childImageSharp {
+        resolutions(width:700) {
+          ...GatsbyImageSharpResolutions_withWebp
+        }
+      }
+    },
+    img13: file(relativePath: {regex: "/gallery13/"}) {
+      childImageSharp {
+        resolutions(width:700) {
+          ...GatsbyImageSharpResolutions_withWebp
+        }
+      }
+    },
+    img14: file(relativePath: {regex: "/gallery14/"}) {
+      childImageSharp {
+        resolutions(width:700) {
+          ...GatsbyImageSharpResolutions_withWebp
+        }
+      }
+    },
+    img15: file(relativePath: {regex: "/gallery15/"}) {
+      childImageSharp {
+        resolutions(width:700) {
+          ...GatsbyImageSharpResolutions_withWebp
+        }
+      }
+    },
 
     sprayGunModel: file(relativePath: {regex: "/spray-gun-model.png/"}) {
       childImageSharp {

@@ -9,7 +9,7 @@ hasGallery: true
 ## "*the most important innovation in powder since the spray gun.*"
 
 <gallery>
-  <gallery-image name="img1" title="Pines in Snow" description="test caption 1"></gallery-image>
+  <gallery-image name="img1"></gallery-image>
   <gallery-image name="img2"></gallery-image>
   <gallery-image name="img3"></gallery-image>
   <gallery-image name="img4"></gallery-image>
@@ -20,6 +20,10 @@ hasGallery: true
   <gallery-image name="img9"></gallery-image>
   <gallery-image name="img10"></gallery-image>
   <gallery-image name="img11"></gallery-image>
+  <gallery-image name="img12"></gallery-image>
+  <gallery-image name="img13"></gallery-image>
+  <gallery-image name="img14"></gallery-image>
+  <gallery-image name="img15"></gallery-image>
 </gallery>
 
 ### MegaParticle™ coatings:

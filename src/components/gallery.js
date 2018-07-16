@@ -82,8 +82,8 @@ export const GalleryImage = ({resolutions, title, description}) => (
   <Wrapper>
     <ImageWrapper resolutions={resolutions} />
     <Caption>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+      {title? <Title>{title}</Title>: null}
+      {description? <Description>{description}</Description>: null}
     </Caption>
   </Wrapper>
 )
