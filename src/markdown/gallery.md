@@ -6,7 +6,6 @@ hasGallery: true
 
 <gallery>
   <gallery-image name="img1"></gallery-image>
-  <gallery-image name="img2"></gallery-image>
   <gallery-image name="img3"></gallery-image>
   <gallery-image name="img4"></gallery-image>
   <gallery-image name="img5"></gallery-image>

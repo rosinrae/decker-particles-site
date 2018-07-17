@@ -57,6 +57,14 @@ const Header = ({siteTitle, logo, banner}) =>{
             MegaBore™ Equipment
           </NavItem>
         </NavDropdown>
+        <NavDropdown text="Order" >
+          <NavItem to="/order/stock/">
+            Stock MegaParticle™ Coatings 
+          </NavItem>
+          <NavItem to="/order/custom/">
+            Custom MegaParticle™ Coatings
+          </NavItem>
+        </NavDropdown>
         <NavItem to="/contact/">Contact Us</NavItem>
         <NavItem to="/about/">About Us</NavItem>
         <NavItem to="/gallery/">Gallery</NavItem>
