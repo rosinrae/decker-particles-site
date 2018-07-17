@@ -59,6 +59,7 @@ const Header = ({siteTitle, logo, banner}) =>{
         </NavDropdown>
         <NavItem to="/contact/">Contact Us</NavItem>
         <NavItem to="/about/">About Us</NavItem>
+        <NavItem to="/gallery/">Gallery</NavItem>
       </Nav>
     </Wrapper>
   </StyledHeader>
