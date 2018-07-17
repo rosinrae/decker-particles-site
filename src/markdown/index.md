@@ -8,6 +8,10 @@ hasGallery: true
 # Welcome to the world of MegaParticle™ coatings,
 ## "*the most important innovation in powder since the spray gun.*"
 
+
+<gallery-image name="img11" title="Pines in Snow" description='Enormous green polyester flake on a white polyester background (3 × 5" panel)' ></gallery-image>
+
+
 ### MegaParticle™ coatings:
 + Solid, flake-shaped particles
 + Up to 0.75 inch across
