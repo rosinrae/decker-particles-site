@@ -1,7 +1,7 @@
 ---
 path: "/"
 title: "Decker Particles Inc."
-footer: "Call 208-881-8245 to learn more"
+footer: "Call 208-881-8049 to learn more"
 hasGallery: true
 ---
 
