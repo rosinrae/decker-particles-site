@@ -78,15 +78,15 @@ display: flex;
 flex-direction: row;
 `
 
-export const GalleryImage = ({resolutions, title, description}) => (
-  <Wrapper>
+export const GalleryImage = ({resolutions, title, children}) => { 
+  return (<Wrapper>
     <ImageWrapper resolutions={resolutions} />
     <Caption>
       {title? <Title>{title}</Title>: null}
-      {description? <Description>{description}</Description>: null}
+      {children? <Description>{children}</Description>: null}
     </Caption>
-  </Wrapper>
-)
+  </Wrapper>)
+}
   
 
 

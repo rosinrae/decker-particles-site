@@ -12,16 +12,14 @@ const makeRenderer = (data) => {
 
 
   let Image = ({name, caption}) => {
-    console.log(data[name])
     return data[name].childImageSharp.resolutions ?
           <Img resolutions={data[name].childImageSharp.resolutions} /> :
           <Img sizes={data[name].childImageSharp.sizes} />
   }
 
-  let ContextGalleryImage = ({name, description, title}) => {
-    console.log(name)
+  let ContextGalleryImage = (props) => {
     return(
-    <GalleryImage resolutions={data[name].childImageSharp.resolutions} title={title} description={description} />
+    <GalleryImage resolutions={data[props.name].childImageSharp.resolutions} {...props} />
   )}
 
   return new rehypeReact({
