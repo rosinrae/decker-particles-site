@@ -4,8 +4,15 @@ import BasicPage from "../components/basic-page"
 import Img from "gatsby-image"
 import Gallery, { GalleryImage } from "../components/gallery"
 import rehypeReact from "rehype-react"
+import Link from "gatsby-link"
 
 const accessOrEmptyString = (obj, x) => obj.hasOwnProperty(x) ? obj[x] : ""
+
+const PageLink = styled(Link).attrs({
+  to: (props => props.href || "#")
+})`
+  text-decoration: underline;
+`
 
 // need renderAst to have access to our graphql data
 const makeRenderer = (data) => {
@@ -28,6 +35,8 @@ const makeRenderer = (data) => {
       "image-custom" : Image,
       "gallery-image": ContextGalleryImage,
       "gallery"   : Gallery,
+      a           : PageLink,
+
     }
   }).Compiler
 }

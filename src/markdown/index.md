@@ -72,7 +72,7 @@ hasGallery: true
 
 ### MegaParticle™ coatings:
 + Solid, flake-shaped particles
-+ Up to 0.75 inch across
++ Up to 0.75 inches in largest dimension
 + Co-curable with powder coatings
 + Available in all colors and glosses
 + Applied like powder by electrostatic spray

@@ -3,6 +3,7 @@ path: "/order/stock/"
 title: "Stock Information"
 ---
 
+# Stock Coatings 
 
 ### Superdurable TGIC-Cured Polyester
 | Product Code |    Color         | Gloss | Size*      |
@@ -16,12 +17,12 @@ title: "Stock Information"
 | SSR002S8     | Red              | High  | A, B, C, D |
 | SSC001S1     | Clear            | Low   | A, B, C, D |
 
-
+<br/>
 
 \***MegaParticle™** coating flakes may be manufactured in all the same
 chemistries, colors, glosses and surface effects as traditional powder
 coatings. They may be supplied in various size ranges, including:
-+ A: 0.125 mesh (particles less than 0.125" across
-+ B: 0.25 - 0.125 mesh (particles between and 0.125" and 0.25" across)
-+ C: 0.5 - 0.25 mesh (mostly particles between 0.25" and 0.5" across. Particles may be up to 0.75" long)
-+ D: Mixed (Run of the mill blend, all sizes up to 0.75” across)
++ A:  -8 mesh (particles less than 0.125" across)
++ B:  4-8 mesh (particles between 0.125 and 0.25" across)
++ C:  2-4 mesh (particles between 0.25 and 0.5" across. Some particles may be 0.75" or more long.)
++ D:  Run of the mill distribution (mixture of sizes up to 2 mesh)

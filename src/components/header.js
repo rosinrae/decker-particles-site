@@ -41,7 +41,6 @@ color: white;
 `
 
 const Header = ({siteTitle, logo, banner}) =>{
-  console.log(logo)
   return <StyledHeader>
     <Wrapper>
       <Banner>
@@ -63,6 +62,9 @@ const Header = ({siteTitle, logo, banner}) =>{
           </NavItem>
           <NavItem to="/order/custom/">
             Custom MegaParticle™ Coatings
+          </NavItem>
+          <NavItem to="/equipment/">
+            MegaBore™ Equipment
           </NavItem>
         </NavDropdown>
         <NavItem to="/contact/">Contact Us</NavItem>
